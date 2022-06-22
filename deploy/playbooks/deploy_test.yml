@@ -1,0 +1,43 @@
+---
+
+- hosts: test
+  user: chacra
+  roles:
+    - common
+    - repos
+    - statsd
+  vars:
+     app_name: "chacra"
+     use_ssl: true
+     wsgi_file: wsgi.py
+     wsgi_callable: application
+     ansible_ssh_port: 2222
+     binary_root: "/opt/binaries"
+     repos_root: "/opt/repos"
+     distributions_root: "/opt/distributions"
+     branch: "master"
+     development_server: false
+     purge_repos: True
+     fqdn: "{{ inventory_hostname }}"
+     ## required. use something like chacra# so rabbitmq will start
+     ## see http://tracker.ceph.com/issues/19316
+     short_hostname: "m1306005"
+     # required for first deploy
+     api_user: "admin"
+     api_key: "secret"
+     # graphite reporting for statsd
+     graphite_host: "172.23.232.5"
+     ## required
+     graphite_api_key: '1234-asdf-1234'
+     # callbacks
+     callback_url: "http://172.23.232.5:8082/api/repos/"
+     ## required for first deploy
+     callback_user: "admin"
+     callback_key: "secret"
+     callback_verify_ssl: True
+     health_ping: true
+     health_ping_url: "http://172.23.232.5:8082/api/nodes/"
+     use_letsencrypt: False
+     nginx_ssl_cert_path: "/etc/letsencrypt/live/{{ fqdn }}/fullchain.pem"
+     nginx_ssl_key_path: "/etc/letsencrypt/live/{{ fqdn }}/privkey.pem"
+     combine_deb_repos: False
