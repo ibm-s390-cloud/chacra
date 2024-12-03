@@ -1,5 +1,5 @@
 [production]
-m1306008.lnxero1.boe short_hostname=m1306008
+m1306005.lnxero1.boe short_hostname=m1306005
 
 [test]
-m1306008.lnxero1.boe short_hostname=m1306008
+m1306005.lnxero1.boe short_hostname=m1306005
