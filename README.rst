@@ -51,7 +51,7 @@ can be consumed to dig deeper into the URL structure:
 
     {
         "ceph": ["firefly", "giant", "hammer"],
-        "ceph-deploy": ["master"]
+        "ceph-deploy": ["main"]
     }
 
 
@@ -443,7 +443,6 @@ by using the following configuration::
             "Architectures": "amd64 armhf i386 source",
             "Suite": "stable",
             "Components": "main",
-            "DDebComponents": "main",
         },
         "ceph": {
             "Description": "Ceph distributed file system",

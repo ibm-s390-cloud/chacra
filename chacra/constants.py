@@ -1,5 +1,6 @@
 # a list of distro versions that chacra will generate a distributions file for
 DISTRIBUTIONS = [
+    'bookworm',
     'bullseye',
     'buster',
     'sid',
@@ -17,7 +18,8 @@ DISTRIBUTIONS = [
     'xenial',
     'bionic',
     'focal',
-    'mantic',
+    'jammy',
+    'noble',
 ]
 
 # These are reserved keys that will be ignored when processing repos. Otherwise
