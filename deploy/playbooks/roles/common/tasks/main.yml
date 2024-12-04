@@ -106,14 +106,14 @@
     - "{{ binary_root }}"
     - "{{ repos_root }}"
 
-- include: postgresql.yml
+- include_tasks: postgresql.yml
   tags:
     - postgres
 
-- include: systemd.yml
+- include_tasks: systemd.yml
   tags:
     - systemd
 
-- include: nginx.yml
+- include_tasks: nginx.yml
   tags:
     - nginx
