@@ -52,7 +52,7 @@
 
 - name: "pip+git install {{ app_name }} into virtualenv."
   # pip: name='git+https://github.com/ceph/chacra@{{ branch }}#egg=chacra' virtualenv={{ app_home }} editable=yes state=forcereinstall
-  pip: name='git+https://github.com/ceph/chacra#egg=chacra' virtualenv={{ app_home }} editable=yes state=forcereinstall
+  pip: name='git+https://github.com/ibm-s390-cloud/chacra@s390x_m1306005_m130602X#egg=chacra' virtualenv={{ app_home }} editable=yes state=forcereinstall
   changed_when: False
 
 - name: create the prod config file
