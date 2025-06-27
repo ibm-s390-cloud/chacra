@@ -5,7 +5,7 @@ from chacra import models
 # Server Specific Configurations
 server = {
     'port': '8083',
-    'host': '172.23.230.157'
+    'host': '172.18.228.156'
 }
 
 # Pecan Application Configurations

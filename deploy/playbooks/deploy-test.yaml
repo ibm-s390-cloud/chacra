@@ -21,22 +21,22 @@
      fqdn: "{{ inventory_hostname }}"
      ## required. use something like chacra# so rabbitmq will start
      ## see http://tracker.ceph.com/issues/19316
-     short_hostname: "m1306008"
+     short_hostname: "b3e06001"
      # required for first deploy
      api_user: "admin"
      api_key: "secret"
      # graphite reporting for statsd
-     graphite_host: "172.23.230.157"
+     graphite_host: "172.18.228.156"
      ## required
      graphite_api_key: '1234-asdf-1234'
      # callbacks
-     callback_url: "http://172.23.230.157:8082/api/repos/"
+     callback_url: "http://172.18.228.156:8082/api/repos/"
      ## required for first deploy
      callback_user: "admin"
      callback_key: "secret"
      callback_verify_ssl: True
      health_ping: true
-     health_ping_url: "http://172.23.230.157:8082/api/nodes/"
+     health_ping_url: "http://172.18.228.156:8082/api/nodes/"
      use_letsencrypt: False
      nginx_ssl_cert_path: "/etc/letsencrypt/live/{{ fqdn }}/fullchain.pem"
      nginx_ssl_key_path: "/etc/letsencrypt/live/{{ fqdn }}/privkey.pem"
