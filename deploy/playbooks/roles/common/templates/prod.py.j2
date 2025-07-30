@@ -2,9 +2,34 @@
 from pecan.hooks import TransactionHook
 from chacra import models
 from chacra import hooks
-from prod_db import sqlalchemy
-from prod_api_creds import api_key, api_user
-from prod_callbacks import callback_url, callback_user, callback_key, health_ping, health_ping_url, callback_verify_ssl, hostname
+#from prod_db import sqlalchemy
+#from prod_api_creds import api_key, api_user
+#from prod_callbacks import callback_url, callback_user, callback_key, health_ping, health_ping_url, callback_verify_ssl, hostname
+
+
+sqlalchemy = {
+    'url': 'postgresql+psycopg2://chacra:SQ14dMi7h9Qs9NEQJzPwkqIUezgmOK83mXi51h7J@127.0.0.1/chacra',
+    'echo':          False,
+    'echo_pool':     False,
+    'pool_recycle':  3600,
+    'encoding':      'utf-8'
+}
+
+# Basic HTTP Auth credentials
+api_user = "admin"
+api_key = "secret"
+
+callback_url = "http://172.18.228.156:8082/api/repos/"
+callback_user = "admin"
+callback_key = "secret"
+callback_verify_ssl = True
+
+# Health Pings
+health_ping = True
+# note this url will get the hostname appended
+health_ping_url = "http://172.18.228.156:8082/api/nodes/"
+# this value will be used when registering the node with shaman
+hostname = "b3e06001.lnxne.boe"
 
 
 # Server Specific Configurations
