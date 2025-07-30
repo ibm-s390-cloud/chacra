@@ -1,5 +1,10 @@
 ---
 
+- name: Set SSH username to root
+  set_fact:
+    ansible_ssh_user: root
+  changed_when: false
+
 - name: ensure /var/log/celery dir exists
   become: true
   file: path=/var/log/celery state=directory owner={{ ansible_ssh_user }} group={{ ansible_ssh_user }} recurse=yes

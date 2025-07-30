@@ -15,7 +15,7 @@
      binary_root: "/opt/binaries"
      repos_root: "/opt/repos"
      distributions_root: "/opt/distributions"
-     branch: "master"
+     branch: "s390x_b3e06001"
      development_server: false
      purge_repos: True
      fqdn: "{{ inventory_hostname }}"
