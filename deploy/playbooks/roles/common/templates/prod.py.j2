@@ -19,7 +19,7 @@ sqlalchemy = {
 api_user = "admin"
 api_key = "secret"
 
-callback_url = "http://172.23.232.2:8082/api/repos/"
+callback_url = "http://127.0.0.1:8082/api/repos/"
 callback_user = "admin"
 callback_key = "secret"
 callback_verify_ssl = True
@@ -27,7 +27,7 @@ callback_verify_ssl = True
 # Health Pings
 health_ping = True
 # note this url will get the hostname appended
-health_ping_url = "http://172.23.232.2:8082/api/nodes/"
+health_ping_url = "http://127.0.0.1:8082/api/nodes/"
 # this value will be used when registering the node with shaman
 hostname = "b3e06002.lnxne.boe"
 
@@ -35,7 +35,7 @@ hostname = "b3e06002.lnxne.boe"
 # Server Specific Configurations
 server = {
     'port': '8083',
-    'host': '172.23.232.2'
+    'host': '127.0.0.1'
 }
 
 # Pecan Application Configurations
