@@ -246,7 +246,7 @@ quiet_time = 20
 
 repos = {
     'ceph': {
-        'automatic': False,
+        'automatic': True,
         # ceph-deploy production builds should go into the "ref" main
         # because otherwise we would be forced to list every "vN.N.N" ref
         # here to avoid getting cruft like "test" builds
@@ -336,7 +336,7 @@ distributions = {
         "Contents": ".gz .bz2",
         "Origin": "ceph.com",
         "Description": "",
-        "Architectures": "amd64 arm64 armhf i386 source",
+        "Architectures": "s390x source",
         "Suite": "stable",
         "Components": "main",
     },

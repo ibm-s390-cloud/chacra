@@ -1,7 +1,7 @@
 psycopg2-binary==2.9.9
 gunicorn<20.1.0
 pecan
-sqlalchemy==1.4.53
+SQLAlchemy
 pecan-notario
 celery[librabbitmq]
 alembic
