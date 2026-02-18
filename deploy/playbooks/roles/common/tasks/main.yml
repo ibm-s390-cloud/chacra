@@ -20,8 +20,8 @@
     state: present
     create: yes
 
-# rabbitmq must be installed after the hostname is set
-- include_tasks: rabbitmq.yml
+# # rabbitmq must be installed after the hostname is set
+# - include_tasks: rabbitmq.yml
 
 - name: "ensure a home for {{ app_name }}"
   become: true
