@@ -15,7 +15,7 @@ def create_rpm_repo(repo_id):
     """
     Go create or update repositories with specific IDs.
     """
-    directories = ['SRPMS', 'noarch', 'x86_64', 'aarch64']
+    directories = ['SRPMS', 'noarch', 's390x', 'aarch64']
     # get the root path for storing repos
     # TODO: Is it possible we can get an ID that doesn't exist anymore?
     repo = models.Repo.get(repo_id)
@@ -93,4 +93,4 @@ def _createrepo(base_path, repo_dirs, distro):
             # causing the database to fail to store the size and subsequently make
             # the package uninstallable. Ideally, this types of flag options should
             # be configurable
-            subprocess.check_call(['createrepo', '--no-database', d])
+            subprocess.check_call(['createrepo_c', '--no-database', d])
